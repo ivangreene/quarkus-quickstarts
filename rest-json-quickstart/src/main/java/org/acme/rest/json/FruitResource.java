@@ -1,5 +1,6 @@
 package org.acme.rest.json;
 
+import jakarta.ws.rs.BadRequestException;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Set;
@@ -21,7 +22,7 @@ public class FruitResource {
 
     @GET
     public Set<Fruit> list() {
-        return fruits;
+        throw new BadRequestException();
     }
 
     @POST
